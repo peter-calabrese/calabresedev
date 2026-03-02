@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function ComingSoon() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 ">
 
       {/* Main Content Container */}
       <div className="max-w-2xl w-full space-y-8 text-center">
@@ -34,7 +34,7 @@ export default function ComingSoon() {
         </div>
 
         {/* Notification Form */}
-        <div className="max-w-md mx-auto space-y-4">
+        <div className=" max-w-md mx-auto space-y-4">
           <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
             Looking to have something built? Reach out below
           </p>
