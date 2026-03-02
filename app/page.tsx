@@ -40,11 +40,11 @@ export default function ComingSoon() {
           </p>
           <form className="flex w-full items-center space-x-2 flex-col gap-2 h-fit " onSubmit={(e) => e.preventDefault()}>
             <div className="flex w-full items-center space-x-2 gap-2" >
-              <Input type="text" placeholder="First Name" className="flex-1 h-10 border-zinc-50" />
-              <Input type="text" placeholder="Last Name" className="flex-1 h-10 border-zinc-50" />
+              <Input type="text" placeholder="First Name" className="flex-1 h-10 dark:border-zinc-50" />
+              <Input type="text" placeholder="Last Name" className="flex-1 h-10 dark:border-zinc-50" />
             </div>
-            <Input type="email" placeholder="Enter your email" className="h-10 border-zinc-50" />
-            <Textarea placeholder="Type your message here." className="h-32 border-zinc-50" />
+            <Input type="email" placeholder="Enter your email" className="h-10 dark:border-zinc-50" />
+            <Textarea placeholder="Type your message here." className="h-32 dark:border-zinc-50" />
             <Button type="submit" className="bg-zinc-950 text-zinc-50 dark:bg-zinc-50 dark:text-zinc-950 w-full">Send Message</Button>
           </form>
         </div>
