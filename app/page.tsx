@@ -4,11 +4,12 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Github, Mail, Linkedin, Terminal } from "lucide-react"
 import { Textarea } from "@/components/ui/textarea"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function ComingSoon() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 ">
-
+      <Analytics />
       {/* Main Content Container */}
       <div className="max-w-2xl w-full space-y-8 text-center">
 
