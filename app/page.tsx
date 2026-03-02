@@ -38,7 +38,7 @@ export default function ComingSoon() {
           <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
             Looking to have something built? Reach out below
           </p>
-          <form className="flex w-full items-center space-x-2 flex-col gap-2 h-fit " onSubmit={(e) => e.preventDefault()}>
+          <form className="flex w-full items-center space-x-2 flex-col gap-2 h-fit p-2" onSubmit={(e) => e.preventDefault()}>
             <div className="flex w-full items-center space-x-2 gap-2" >
               <Input type="text" placeholder="First Name" className="flex-1 h-10 dark:border-zinc-50" />
               <Input type="text" placeholder="Last Name" className="flex-1 h-10 dark:border-zinc-50" />
