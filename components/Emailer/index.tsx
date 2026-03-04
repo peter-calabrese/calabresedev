@@ -3,6 +3,15 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 interface EmailData {
   firstName: string;
   lastName: string;
@@ -87,6 +96,18 @@ export default function Emailer() {
           onChange={(e) => onStateChange("email", e.target.value)}
           value={data.email}
         />
+        <Select>
+          <SelectTrigger className="w-45">
+            <SelectValue placeholder="Theme" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="light">Light</SelectItem>
+              <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="system">System</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
         <Textarea
           name="message"
           placeholder="Type your message here."
