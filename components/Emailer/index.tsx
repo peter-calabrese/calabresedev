@@ -78,10 +78,6 @@ export default function Emailer() {
             value={data.website}
           />
           <Input
-            style={{
-              WebkitBoxShadow: "0 0 0px 1000px #09090b inset",
-              WebkitTextFillColor: "#ffffff",
-            }}
             type="text"
             name="firstname"
             placeholder="First Name"
@@ -90,10 +86,6 @@ export default function Emailer() {
             value={data.firstName}
           />
           <Input
-            style={{
-              WebkitBoxShadow: "0 0 0px 1000px #09090b inset",
-              WebkitTextFillColor: "#ffffff",
-            }}
             type="text"
             name="lastname"
             placeholder="Last Name"
@@ -109,10 +101,6 @@ export default function Emailer() {
           className="h-10 dark:border-zinc-50 bg-zinc-950"
           onChange={(e) => onStateChange("email", e.target.value)}
           value={data.email}
-          style={{
-            WebkitBoxShadow: "0 0 0px 1000px #09090b inset",
-            WebkitTextFillColor: "#ffffff",
-          }}
         />
         <Select
           value={data.project}
