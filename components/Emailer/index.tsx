@@ -98,7 +98,7 @@ export default function Emailer() {
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="h-10 dark:border-zinc-50 bg-zinc-950"
+          className="h-10 dark:border-zinc-50 dark:bg-zinc-950"
           onChange={(e) => onStateChange("email", e.target.value)}
           value={data.email}
         />
