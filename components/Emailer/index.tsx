@@ -96,7 +96,7 @@ export default function Emailer() {
           onChange={(e) => onStateChange("email", e.target.value)}
           value={data.email}
         />
-        <Select>
+        {/* <Select>
           <SelectTrigger className="w-45">
             <SelectValue placeholder="Theme" />
           </SelectTrigger>
@@ -107,7 +107,7 @@ export default function Emailer() {
               <SelectItem value="system">System</SelectItem>
             </SelectGroup>
           </SelectContent>
-        </Select>
+        </Select> */}
         <Textarea
           name="message"
           placeholder="Type your message here."
