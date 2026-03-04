@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+
 import {
   Select,
   SelectContent,
@@ -12,11 +13,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-interface EmailData {
+export interface EmailData {
   firstName: string;
   lastName: string;
   email: string;
   message: string;
+  project: string;
+  otherProject?: string;
   website?: string;
 }
 
@@ -26,6 +29,8 @@ export default function Emailer() {
     lastName: "",
     email: "",
     message: "",
+    project: "",
+    otherProject: "",
     website: "",
   };
   const [data, setData] = useState<EmailData>(defaultStateValue);
@@ -51,17 +56,18 @@ export default function Emailer() {
     }
     setData(defaultStateValue);
   };
+
   return (
     <div className=" max-w-md mx-auto space-y-4">
       <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
         Looking to have something built? Reach out below
       </p>
+
       <form
-        className="flex w-full items-center  flex-col gap-2 h-fit p-2"
+        className="flex w-full items-center flex-col gap-2 h-fit p-2"
         onSubmit={onSubmit}
       >
-        <div className="flex w-full items-center  gap-2">
-          {/* Honeypot - hidden from real users */}
+        <div className="flex w-full items-center gap-2">
           <input
             type="text"
             name="website"
@@ -72,6 +78,10 @@ export default function Emailer() {
             value={data.website}
           />
           <Input
+            style={{
+              WebkitBoxShadow: "0 0 0px 1000px #09090b inset",
+              WebkitTextFillColor: "#ffffff",
+            }}
             type="text"
             name="firstname"
             placeholder="First Name"
@@ -80,6 +90,10 @@ export default function Emailer() {
             value={data.firstName}
           />
           <Input
+            style={{
+              WebkitBoxShadow: "0 0 0px 1000px #09090b inset",
+              WebkitTextFillColor: "#ffffff",
+            }}
             type="text"
             name="lastname"
             placeholder="Last Name"
@@ -92,25 +106,51 @@ export default function Emailer() {
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="h-10 dark:border-zinc-50"
+          className="h-10 dark:border-zinc-50 bg-zinc-950"
           onChange={(e) => onStateChange("email", e.target.value)}
           value={data.email}
+          style={{
+            WebkitBoxShadow: "0 0 0px 1000px #09090b inset",
+            WebkitTextFillColor: "#ffffff",
+          }}
         />
-        {/* <Select>
-          <SelectTrigger className="w-45">
-            <SelectValue placeholder="Theme" />
+        <Select
+          value={data.project}
+          onValueChange={(e) => onStateChange("project", e)}
+        >
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Project Type" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-zinc-950 ">
             <SelectGroup>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
+              <SelectItem value="Mobile App" className="hover:bg-zinc-900">
+                Mobile App
+              </SelectItem>
+              <SelectItem value="Wesbite" className="hover:bg-zinc-900">
+                Website
+              </SelectItem>
+              <SelectItem value="Consulting" className="hover:bg-zinc-900">
+                Consulting
+              </SelectItem>
+              <SelectItem value="other" className="hover:bg-zinc-900">
+                Other
+              </SelectItem>
             </SelectGroup>
           </SelectContent>
-        </Select> */}
+        </Select>
+        {data.project == "other" && (
+          <Input
+            value={data.otherProject}
+            onChange={(e) => onStateChange("otherProject", e.target.value)}
+            type="text"
+            name="projectType"
+            placeholder="What type of project"
+            className="h-10 dark:border-zinc-50"
+          />
+        )}
         <Textarea
           name="message"
-          placeholder="Type your message here."
+          placeholder="Tell me about your project! What are you building? What's your timeline?"
           className="h-32 dark:border-zinc-50"
           onChange={(e) => onStateChange("message", e.target.value)}
           value={data.message}
@@ -122,6 +162,8 @@ export default function Emailer() {
             data.firstName == "" ||
             data.email === "" ||
             data.message == "" ||
+            data.project == "" ||
+            (data.project == "other" && data.otherProject == "") ||
             isLoading
           }
         >
@@ -131,7 +173,7 @@ export default function Emailer() {
               <span className="text-zinc-600">Sending...</span>
             </div>
           ) : (
-            "Send Message"
+            "Get in Touch"
           )}
         </Button>
       </form>
