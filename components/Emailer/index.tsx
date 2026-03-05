@@ -109,7 +109,7 @@ export default function Emailer() {
           <SelectTrigger className="w-full">
             <SelectValue placeholder="Project Type" />
           </SelectTrigger>
-          <SelectContent className="bg-zinc-950 ">
+          <SelectContent className="dark:bg-zinc-950 ">
             <SelectGroup>
               <SelectItem value="Mobile App" className="hover:bg-zinc-900">
                 Mobile App
