@@ -1,5 +1,7 @@
 import { Badge } from "@/components/ui/badge";
-import { Github, Mail, Linkedin, Terminal } from "lucide-react";
+import { Mail, Terminal } from "lucide-react";
+import {GitHub,LinkedIn} from "@/icons/";
+
 import { Analytics } from "@vercel/analytics/next";
 import Emailer from "@/components/Emailer";
 
@@ -43,14 +45,14 @@ export default function ComingSoon() {
             className="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
           >
             <span className="sr-only">GitHub</span>
-            <Github className="w-6 h-6" />
+            <GitHub className="w-6 h-6" />
           </a>
           <a
             href="https://www.linkedin.com/in/peter-calabrese/"
             className="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
           >
             <span className="sr-only">LinkedIn</span>
-            <Linkedin className="w-6 h-6" />
+            <LinkedIn className="w-6 h-6" />
           </a>
           <a
             href="mailto:peter@calabrese.dev"
@@ -63,7 +65,7 @@ export default function ComingSoon() {
       </div>
 
       {/* Footer */}
-      <div className="mt-4 md:absolute md:bottom-6 text-sm text-zinc-400">
+      <div className="mt-4 md:static md:bottom-6 text-sm text-zinc-400">
         &copy; {new Date().getFullYear()} Peter Calabrese. All rights reserved.
       </div>
     </div>
