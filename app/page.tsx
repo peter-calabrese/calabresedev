@@ -1,18 +1,22 @@
+import type { Metadata } from "next";
+import { structuredData } from "@/lib/site";
 import Image from "next/image";
 import Emailer from "@/components/Emailer";
 import {
   ArrowDown,
   ArrowDownToLine,
   ArrowRight,
-  ArrowUpRight,
   Check,
   ChevronDown,
   Code2,
-  Mail,
   MapPin,
 } from "lucide-react";
 import { GitHub, LinkedIn, Twitter } from "@/icons/";
 import { Analytics } from "@vercel/analytics/next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const repository = "https://github.com/peter-calabrese/localization";
 const experience = [
@@ -69,6 +73,12 @@ export default function Home() {
   return (
     <>
       <Analytics />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -376,7 +386,7 @@ export default function Home() {
               <p className="eyebrow">LET’S CONNECT</p>
               <h2>Think we’d work well together?</h2>
               <p>
-                Have a role or project in mind? Send me a message and tell me
+                Have a role or freelance project in mind? Send me a message and tell me
                 what you’re working on.
               </p>
             </div>

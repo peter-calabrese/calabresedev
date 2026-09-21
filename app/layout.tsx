@@ -1,37 +1,36 @@
 import type { Metadata } from "next";
+import { siteDescription, siteTitle, siteUrl } from "@/lib/site";
 import "./globals.css";
 import "./portfolio.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.calabrese.dev"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Peter Calabrese | Full-Stack Software Engineer",
+    default: siteTitle,
     template: "%s | Peter Calabrese",
   },
-  description:
-    "Full-stack software engineer with 5+ years building enterprise React applications, Java/Spring Boot services, and Azure solutions. Explore my experience, localization project, and resume.",
+  description: siteDescription,
   openGraph: {
     type: "website",
+    locale: "en_US",
     siteName: "Peter Calabrese",
-    title: "Peter Calabrese",
-    description:
-      "Full-stack software engineer with 5+ years building enterprise React applications, Java/Spring Boot services, and Azure solutions. Explore my experience, localization project, and resume.",
-    url: "https://www.calabrese.dev",
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
     images: [
       {
         url: "/profile.jpg",
         width: 400,
         height: 400,
-        alt: "Peter Calabrese",
+        alt: "Peter Calabrese, full-stack software engineer in New York",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Peter Calabrese",
-    description:
-      "Full-stack software engineer with 5+ years building enterprise React applications, Java/Spring Boot services, and Azure solutions. Explore my experience, localization project, and resume.",
-    images: ["/profile.jpeg"],
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/profile.jpg"],
   },
 };
 
