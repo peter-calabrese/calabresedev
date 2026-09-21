@@ -121,7 +121,7 @@ export default function Home() {
           </div>
           <figure className="portrait">
             <Image
-              src="/profile.jpeg"
+              src="/profile.jpg"
               alt="Peter Calabrese"
               width={400}
               height={400}
