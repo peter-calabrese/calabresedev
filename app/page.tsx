@@ -93,14 +93,13 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow">FULL-STACK SOFTWARE ENGINEER</p>
             <h1 id="intro-title">
-              Complex systems.
+              Hey, I'm Peter!
               <br />
-              <span>Clear thinking.</span>
             </h1>
             <p className="hero-description">
-              I’m Peter, a New York–based engineer with{" "}
-              <strong>5+ years</strong> building enterprise React applications
-              and scalable backend services.
+              I’m a New York–based engineer with <strong>5+ years</strong>{" "}
+              building enterprise React applications and scalable backend
+              services.
             </p>
 
             <div className="hero-actions">
