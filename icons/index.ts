@@ -1,3 +1,4 @@
 import GitHub from "./GitHub";
 import LinkedIn from './LinkedIn'
-export {GitHub, LinkedIn}
+import Twitter from './Twitter'
+export {GitHub, LinkedIn, Twitter}
