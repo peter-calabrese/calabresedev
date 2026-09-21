@@ -21,7 +21,7 @@ const experience = [
     title: "VP, Senior Software Engineer",
     project: "Cash Management System",
     summary:
-      "Helped rebuild and launch a modern cash management platform, connecting a React frontend with Java / Spring Boot services and PostgreSQL.",
+      "Helped rebuild and launch a modern cash management platform, connecting a React micro frontend with Java / Spring Boot service, Azure Serverless Funcions  and PostgreSQL.",
     highlight: "Delivery across 6 cross-functional teams",
     details: [
       "Helped establish a microfrontend architecture with Vite Module Federation and coordinated feature migrations across design, QA, product, infrastructure, and DevOps.",
@@ -34,7 +34,7 @@ const experience = [
     title: "VP, Software Engineer",
     project: "ALPS · Loan processing",
     summary:
-      "Led frontend development for an internal loan processing application used by 20+ groups across four departments. Integrated MSAL single sign-on for over 1,500 internal users.",
+      "Led frontend development for an internal loan processing application built in React used by 20+ groups across four departments. Integrated MSAL single sign-on for over 1,500 internal users.",
     highlight: "TypeScript adopted across the application",
     details: [
       "Introduced TypeScript throughout the application, with an estimated 20% improvement in developer productivity.",
@@ -83,7 +83,7 @@ export default function Home() {
             <a href="#skills">Skills</a>
           </nav>
           <a className="nav-contact" href="#contact">
-            Let’s talk <ArrowUpRight size={14} />
+            Let’s Connect
           </a>
         </div>
       </header>
@@ -205,10 +205,7 @@ export default function Home() {
                   <h3>{role.title}</h3>
                   <p className="role-project">{role.project}</p>
                   <p>{role.summary}</p>
-                  <p className="role-highlight">
-                    <ArrowRight size={14} />
-                    {role.highlight}
-                  </p>
+
                   {role.details.length > 0 && (
                     <details className="read-more">
                       <summary>
@@ -235,33 +232,22 @@ export default function Home() {
           <div className="wrap">
             <div className="project-topline">
               <p className="eyebrow">02 / FEATURED PROJECT</p>
-              <a className="text-link" href={repository}>
-                <GitHub className="social-icon" /> View source{" "}
-                <ArrowUpRight size={14} />
-              </a>
             </div>
             <div className="project-layout">
               <div className="project-copy">
-                <p className="project-kind">
-                  DEVELOPER TOOLING · PUBLIC REPOSITORY
-                </p>
                 <h2 id="project-title">
-                  More languages.
+                  Supporting regions.
                   <br />
-                  <span>Less repeat work.</span>
+                  <span>Less work.</span>
                 </h2>
-                <p className="project-intro">
+                <p className="project-intro" style={{ marginBottom: "1.3rem" }}>
                   A TypeScript localization tool that uses Azure AI Translator
                   to translate English locale files while preserving nested keys
                   and file structure.
                 </p>
-                <p className="project-benefit">
-                  The interesting part is what it skips: unchanged strings that
-                  have already been translated. A persistent cache tracks source
-                  text and completed languages to avoid redundant API calls.
-                </p>
+
                 <a className="button secondary" href={repository}>
-                  Explore localization on GitHub <ArrowUpRight size={16} />
+                  Explore on GitHub
                 </a>
               </div>
               <figure
@@ -402,8 +388,8 @@ export default function Home() {
               </p>
             </div>
             <Emailer />
-            {/* <div className="contact-actions"> */}
-            <div className="contact-links" style={{ justifyContent: "center" }}>
+
+            <div className="contact-links">
               <a href="https://www.linkedin.com/in/peter-calabrese/">
                 <LinkedIn className="social-icon" /> LinkedIn
               </a>
@@ -420,7 +406,6 @@ export default function Home() {
                 <ArrowDownToLine size={15} /> Resume
               </a>
             </div>
-            {/* </div> */}
           </div>
         </section>
       </main>

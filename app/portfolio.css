@@ -123,7 +123,7 @@ details[open]>summary svg { transform: rotate(180deg); }
 .contact-layout h2 { font-size: 36px; }
 .contact-copy > p:not(.eyebrow) { font-size: 13px; max-width: 360px; color: var(--muted); line-height: 1.8; margin: 19px 0 0; }
 .contact-email { display: flex; align-items: center; justify-content: space-between; gap: 28px; font-size: 22px; letter-spacing: -.5px; border-bottom: 1px solid #425449; padding-bottom: 14px; }
-.contact-links { display: flex; align-items: center; gap: 25px; margin-top: 22px; }
+.contact-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; grid-column: 1 / -1; gap: 16px 25px; margin-top: 0; width: 100%; }
 .contact-links a { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #aebcb3; }
 .contact-links a:hover { color: var(--accent); }
 .footer { display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: var(--quiet); padding-block: 24px; }
