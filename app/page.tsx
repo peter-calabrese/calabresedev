@@ -154,12 +154,6 @@ export default function Home() {
                 >
                   <LinkedIn className="social-icon" />
                 </a>
-                <a
-                  href="https://x.com/Calabreez"
-                  aria-label="Calabreez on Twitter (X)"
-                >
-                  <Twitter className="social-icon" />
-                </a>
               </div>
             </figcaption>
           </figure>
@@ -394,12 +388,6 @@ export default function Home() {
               </a>
               <a href="https://github.com/peter-calabrese">
                 <GitHub className="social-icon" /> GitHub
-              </a>
-              <a
-                href="https://x.com/Calabreez"
-                aria-label="Calabreez on Twitter (X)"
-              >
-                <Twitter className="social-icon" /> Twitter/X
               </a>
               <a href="/peter-calabrese-resume.pdf" download>
                 <ArrowDownToLine size={15} /> Resume
