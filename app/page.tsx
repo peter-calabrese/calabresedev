@@ -79,9 +79,7 @@ export default function Home() {
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
       />
-      <a className="skip-link" href="#main">
-        Skip to content
-      </a>
+
       <header className="site-header">
         <div className="wrap navigation">
           <a className="brand" href="#">
@@ -113,74 +111,82 @@ export default function Home() {
             <source src="/context-background.mp4?v=3" type="video/mp4" />
           </video>
           <div className="hero-context-overlay" aria-hidden="true" />
-          <div className="wrap hero">
-            <div className="hero-copy">
-              <p className="eyebrow">FULL-STACK SOFTWARE ENGINEER</p>
-              <h1 id="intro-title">
-                Hey, I'm Peter!
-                <br />
-              </h1>
-              <p className="hero-description">
-                I’m a New York–based engineer with <strong>5+ years</strong>{" "}
-                building enterprise React applications and scalable backend
-                services.
-              </p>
-
-              <div className="hero-actions">
-                <a
-                  className="button primary"
-                  href="/peter-calabrese-resume.pdf"
-                  download
-                >
-                  Download resume <ArrowDownToLine size={16} />
-                </a>
-                <a className="text-link" href="#experience">
-                  Explore my experience <ArrowDown size={15} />
-                </a>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <div className="wrap hero">
+              <div className="hero-copy">
+                <p className="eyebrow">FULL-STACK SOFTWARE ENGINEER</p>
+                <h1 id="intro-title">
+                  Hey, I'm Peter!
+                  <br />
+                </h1>
+                <p className="hero-description">
+                  I’m a New York–based engineer with <strong>5+ years</strong>{" "}
+                  building enterprise React applications and scalable backend
+                  services.
+                </p>
+                <div className="hero-actions">
+                  <a
+                    className="button primary"
+                    href="/peter-calabrese-resume.pdf"
+                    download
+                  >
+                    Download resume <ArrowDownToLine size={16} />
+                  </a>
+                  <a className="text-link" href="#experience">
+                    Explore my experience <ArrowDown size={15} />
+                  </a>
+                </div>
+                <p className="hero-stack">
+                  React <span>/</span> TypeScript <span>/</span> Java & Spring
+                  Boot <span>/</span> Azure
+                </p>
               </div>
-              <p className="hero-stack">
-                React <span>/</span> TypeScript <span>/</span> Java & Spring
-                Boot <span>/</span> Azure
-              </p>
+              <figure className="portrait">
+                <Image
+                  src="/profile.jpg"
+                  alt="Peter Calabrese"
+                  width={400}
+                  height={400}
+                  priority
+                  sizes="(max-width: 700px) 90vw, 340px"
+                />
+                <figcaption>
+                  <div>
+                    <strong>Peter Calabrese</strong>
+                    <span>
+                      <MapPin size={12} /> New York, NY
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: 8,
+                    }}
+                  >
+                    <a
+                      href="https://github.com/peter-calabrese"
+                      aria-label="Peter on GitHub"
+                    >
+                      <GitHub className="social-icon" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/peter-calabrese/"
+                      aria-label="Peter on LinkedIn"
+                    >
+                      <LinkedIn className="social-icon" />
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
             </div>
-            <figure className="portrait">
-              <Image
-                src="/profile.jpg"
-                alt="Peter Calabrese"
-                width={400}
-                height={400}
-                priority
-                sizes="(max-width: 700px) 90vw, 340px"
-              />
-              <figcaption>
-                <div>
-                  <strong>Peter Calabrese</strong>
-                  <span>
-                    <MapPin size={12} /> New York, NY
-                  </span>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: 8,
-                  }}
-                >
-                  <a
-                    href="https://github.com/peter-calabrese"
-                    aria-label="Peter on GitHub"
-                  >
-                    <GitHub className="social-icon" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/peter-calabrese/"
-                    aria-label="Peter on LinkedIn"
-                  >
-                    <LinkedIn className="social-icon" />
-                  </a>
-                </div>
-              </figcaption>
-            </figure>
           </div>
         </section>
         <section
@@ -188,7 +194,12 @@ export default function Home() {
           className="wrap section"
           aria-labelledby="experience-title"
         >
-          <div className="section-heading">
+          <div
+            className="section-heading"
+            style={{
+              marginTop: 26,
+            }}
+          >
             <div>
               <p className="eyebrow">01 / EXPERIENCE</p>
               <h2 id="experience-title">Professional Experience</h2>
