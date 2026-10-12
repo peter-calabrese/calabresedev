@@ -25,10 +25,11 @@ const experience = [
     title: "VP, Senior Software Engineer",
     project: "Cash Management System",
     summary:
-      "Helped rebuild and launch a modern cash management platform, connecting a React micro frontend with Java / Spring Boot service, Azure Serverless Funcions  and PostgreSQL.",
+      "Helped rebuild and launch a modern cash management platform, connecting a React microfrontend with Java / Spring Boot services, Azure Serverless Functions, and PostgreSQL.",
     highlight: "Delivery across 6 cross-functional teams",
     details: [
       "Helped establish a microfrontend architecture with Vite Module Federation and coordinated feature migrations across design, QA, product, infrastructure, and DevOps.",
+      "Built Java / Spring Boot backend services, developing REST APIs, implementing business logic, and integrating PostgreSQL queries for new and existing functionality.",
       "Built high-throughput Azure Functions for background processing and monitoring dashboards with Application Insights, custom events, and KQL for payment activity and transaction KPIs.",
       "Built AI-assisted localization, translation caching, and a shared npm package with a custom useTranslation hook. Used Azure App Configuration feature flags to separate business testing from approved production languages.",
     ],
@@ -38,7 +39,7 @@ const experience = [
     title: "VP, Software Engineer",
     project: "ALPS · Loan processing",
     summary:
-      "Led frontend development for an internal loan processing application built in React used by 20+ groups across four departments. Integrated MSAL single sign-on for over 1,500 internal users.",
+      "Led the frontend team for an internal loan processing application built in React used by 20+ groups across four departments. Integrated MSAL single sign-on for over 1,500 internal users.",
     highlight: "TypeScript adopted across the application",
     details: [
       "Introduced TypeScript throughout the application, with an estimated 20% improvement in developer productivity.",
@@ -123,7 +124,7 @@ export default function Home() {
               <div className="hero-copy">
                 <p className="eyebrow">FULL-STACK SOFTWARE ENGINEER</p>
                 <h1 id="intro-title">
-                  Hey, I'm Peter!
+                  Hey, I’m Peter!
                   <br />
                 </h1>
                 <p className="hero-description">

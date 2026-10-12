@@ -134,7 +134,7 @@ export default function Emailer() {
               <option value="Hiring opportunity">Hiring opportunity</option>
               <option value="Website">Website</option>
               <option value="Web application">Web application</option>
-              <option value="Mobile App">Mobile app</option>
+              <option value="Mobile app">Mobile app</option>
               <option value="Consulting">Consulting</option>
               <option value="other">Something else</option>
             </select>
